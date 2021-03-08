@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <div className="App">
-    <h1>Hello world</h1>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <h1 className="bg-primary">Hello world</h1>
+  </div>
+);
 
 export default App;
