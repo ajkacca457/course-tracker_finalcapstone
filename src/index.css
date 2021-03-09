@@ -9,7 +9,20 @@ body {
   height: 100vh;
 }
 
-h1 {
+.head1 {
 font-family: 'Roboto Slab', serif;
-font-size:150%;
+font-size:100%;
+}
+
+.logincont {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+.nav {
+  font-family: 'Roboto Slab', serif;
 }
