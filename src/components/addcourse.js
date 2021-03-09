@@ -2,7 +2,7 @@ import React from 'react';
 
 const Addcourse = () => (
   <div className="logincont">
-    <div className="w-25 bg-white mx-auto p-2 rounded">
+    <div className="w-50 bg-white mx-auto p-2 rounded">
       <h4 className="text-center bg-info py-2 text-white mb-3 rounded">Add new course</h4>
       <form>
         <div className="form-group text-left">

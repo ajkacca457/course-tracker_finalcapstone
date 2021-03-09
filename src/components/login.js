@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => (
   <div className="logincont">
-    <div className="w-25 bg-white mx-auto p-2 rounded">
+    <div className="w-50 bg-white mx-auto p-2 rounded">
       <h5 className="text-center bg-info py-2 text-white mb-3 rounded">Login with email and password</h5>
       <form>
         <div className="form-group text-left">

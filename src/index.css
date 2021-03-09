@@ -14,7 +14,7 @@ font-family: 'Roboto Slab', serif;
 font-size:100%;
 }
 
-.logincont,.home {
+.logincont,.home,.coursecontainer,.courseinfo {
   display: flex;
   height: 80vh;
   justify-content: center;
@@ -22,11 +22,15 @@ font-size:100%;
   font-family: 'Roboto Slab', serif;
 }
 
-.homecontent {
-  width: 30%;
+.homecontent,.coursecontent,.alldetail {
+  width: 50%;
   background-color: white;
   padding: 1%;
 }
+
+.infocontent{
+height: 50vh;
+overflow: auto;}
 
 .nav {
   font-family: 'Roboto Slab', serif;
