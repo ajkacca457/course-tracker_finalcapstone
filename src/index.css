@@ -14,7 +14,7 @@ font-family: 'Roboto Slab', serif;
 font-size:100%;
 }
 
-.logincont {
+.logincont,.home {
   display: flex;
   height: 80vh;
   justify-content: center;
@@ -22,12 +22,10 @@ font-size:100%;
   font-family: 'Roboto Slab', serif;
 }
 
-.home {
-  display: flex;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Roboto Slab', serif;
+.homecontent {
+  width: 30%;
+  background-color: white;
+  padding: 1%;
 }
 
 .nav {

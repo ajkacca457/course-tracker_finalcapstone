@@ -2,13 +2,13 @@ import React from 'react';
 
 const Home = () => (
   <div className="home">
-    <div className="homecontent">
-      <h3>
+    <div className="homecontent rounded">
+      <h4 className="text-center bg-info text-white p-2 rounded mb-3">
         <i className="fas fa-chalkboard-teacher" />
         {' '}
         Course Tracker
-      </h3>
-      <p>
+      </h4>
+      <p className="text-justify">
         Course tracker allows you to track progress of the courses you are taking.
         It is an effective app to make your learning process easy.
       </p>
