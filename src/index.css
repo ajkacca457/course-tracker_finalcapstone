@@ -35,3 +35,15 @@ overflow: auto;}
 .nav {
   font-family: 'Roboto Slab', serif;
 }
+
+.navcont {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+}
+
+.nav-item-easy {
+border: 1px solid rgba(209, 209, 209, 0.1);
+}
