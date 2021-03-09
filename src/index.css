@@ -22,6 +22,13 @@ font-size:100%;
   font-family: 'Roboto Slab', serif;
 }
 
+.home {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+}
 
 .nav {
   font-family: 'Roboto Slab', serif;
