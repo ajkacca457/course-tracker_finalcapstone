@@ -2,6 +2,10 @@ import React from 'react';
 
 const Login = () => (
   <div className="logincont">
+    <h4 className="bg-dark text-white text-center p-2">
+      <i className="fas fa-chalkboard-teacher mr-3" />
+      Course Tracker
+    </h4>
     <div className="bg-white mx-auto p-2 rounded loginitem">
       <h5 className="text-center bg-info py-2 text-white mb-3 rounded">Login with email and password</h5>
       <form>

@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Coursecontainer = () => (
-  <div className="coursecontainer">
-    <div className="coursecontent bg-light">
+  <div className="coursecontainer bg-light">
+    <div className="coursecontent ">
       <h4 className="bg-info text-white text-center p-2">List of Courses</h4>
       <hr />
-      <div className="course1 card border-2 mb-2">
+      <div className="course1 card border-2 mb-2 bg-warning">
         <div className="content d-flex justify-content-between align-items-center p-1">
           <p>Ruby on rails</p>
           <i className="far fa-2x fa-circle mr-2 text-primary" />
@@ -13,7 +13,7 @@ const Coursecontainer = () => (
         </div>
       </div>
 
-      <div className="course1 card border-2 mb-2">
+      <div className="course1 card border-2 mb-2 bg-warning">
         <div className="content d-flex justify-content-between align-items-center p-1">
           <p>Ruby on rails</p>
           <i className="far fa-2x fa-circle mr-2 text-primary" />

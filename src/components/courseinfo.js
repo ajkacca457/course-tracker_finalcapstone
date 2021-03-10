@@ -6,7 +6,7 @@ const Courseinfo = () => (
       <div className="infocontent text-center rounded">
         <h3>Course Name</h3>
         <hr />
-        <div className="percentinfo w-50 d-flex justify-content-between m-auto">
+        <div className="percentinfo w-75 d-flex justify-content-between m-auto">
           <div className="percentcomplete bg-info p-2 text-white rounded">
             <h1>80%</h1>
             {' '}
@@ -45,7 +45,7 @@ const Courseinfo = () => (
       </div>
 
       <div className="btncont my-2 text-center">
-        <button type="button" className="btn btn-info w-75 mb-2">Update Progress</button>
+        <button type="button" className="btn btn-success w-75 mb-2">Update Progress</button>
         <button type="button" className="btn btn-danger w-75 mb-2">Delete Course</button>
         <button type="button" className="btn btn-secondary w-75">Back</button>
 

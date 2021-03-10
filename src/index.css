@@ -15,10 +15,7 @@ font-size:100%;
 }
 
 .logincont,.home,.coursecontainer,.courseinfo {
-  display: flex;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
   font-family: 'Roboto Slab', serif;
 }
 
@@ -44,6 +41,12 @@ overflow: auto;}
   padding: 1%;
 }
 
+.easynav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
 
 @media screen and (max-width: 500px) {
 
@@ -72,6 +75,24 @@ overflow: auto;}
 
 .loginitem,.signupitem,.courseitem {
   margin-top:15%;
+}
+
+.infocontent{
+height: 60vh;
+overflow: auto;}
+
+.percentinfo h1 {
+  font-size: 150%;
+}
+
+.detailinfo h4 {
+  font-size: 100%;
+}
+.detailinfo i {
+  font-size: 100%;
+}
+.courseinfo {
+  background-color: white;
 }
 
 }
