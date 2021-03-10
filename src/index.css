@@ -44,6 +44,34 @@ overflow: auto;}
   padding: 1%;
 }
 
-.nav-item-easy {
-border: 1px solid rgba(209, 209, 209, 0.1);
+
+@media screen and (max-width: 500px) {
+
+  .logincont,.home,.coursecontainer,.courseinfo {
+    height: 100vh;
+  }
+
+  .homecontent,.coursecontent,.alldetail {
+    width:100%;
+    height: 100%;
+  }
+
+.easynav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logincont,.home,.coursecontainer,.courseinfo {
+  display:block;
+  height:100vh;
+  font-family: 'Roboto Slab', serif;
+  padding: 2%;
+}
+
+.loginitem,.signupitem {
+  margin-top:20%;
+}
+
 }

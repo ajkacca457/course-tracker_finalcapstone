@@ -2,7 +2,7 @@ import React from 'react';
 
 const Signup = () => (
   <div className="logincont">
-    <div className="w-50 bg-white mx-auto p-2 rounded">
+    <div className=" bg-white mx-auto p-2 rounded signupitem">
       <h4 className="text-center bg-info py-2 text-white mb-3 rounded">Sign up for free!</h4>
       <form>
         <div className="form-group text-left">

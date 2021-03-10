@@ -10,11 +10,11 @@ const Easynav = () => (
       </div>
       <div className="nav-item-easy">
         <i className="fas fa-chart-line" />
-        <p>Track Course</p>
+        <p>Track</p>
       </div>
       <div className="nav-item-easy">
         <i className="fas fa-chart-pie" />
-        <p>Progress Report</p>
+        <p>Report</p>
       </div>
       <div className="nav-item-easy">
         <i className="fas fa-home" />
