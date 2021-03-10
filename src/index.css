@@ -70,8 +70,8 @@ overflow: auto;}
   padding: 2%;
 }
 
-.loginitem,.signupitem {
-  margin-top:20%;
+.loginitem,.signupitem,.courseitem {
+  margin-top:15%;
 }
 
 }
