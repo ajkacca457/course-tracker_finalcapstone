@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Coursecontainer = () => (
-  <div className="coursecontainer bg-light">
+  <div className="coursecontainer">
     <div className="coursecontent ">
       <h4 className="bg-info text-white text-center p-2">List of Courses</h4>
       <hr />
