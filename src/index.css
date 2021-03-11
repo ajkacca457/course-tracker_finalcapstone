@@ -3,25 +3,30 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
   background-repeat: no-repeat;
   height: 100vh;
 }
 
 .head1 {
-font-family: 'Roboto Slab', serif;
-font-size:100%;
+  font-family: 'Roboto Slab', serif;
+  font-size: 100%;
 }
 
-.logincont,.coursecontainer,.courseinfo {
+.logincont,
+.coursecontainer,
+.courseinfo {
   margin: 2% auto;
   width: 50%;
   height: 100vh;
   font-family: 'Roboto Slab', serif;
 }
 
-.home,.homecontent,.coursecontent,.alldetail {
+.home,
+.homecontent,
+.coursecontent,
+.alldetail {
   background-color: white;
   padding: 1%;
 }
@@ -31,9 +36,10 @@ font-size:100%;
   margin: 2% auto;
 }
 
-.infocontent{
-height: 50vh;
-overflow: auto;}
+.infocontent {
+  height: 50vh;
+  overflow: auto;
+}
 
 .nav {
   font-family: 'Roboto Slab', serif;
@@ -41,7 +47,7 @@ overflow: auto;}
 
 .navcont {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   text-align: center;
   align-items: center;
   padding: 1%;
@@ -55,62 +61,70 @@ overflow: auto;}
 }
 
 @media screen and (max-width: 500px) {
-
-  .logincont,.home,.courseinfo {
+  .logincont,
+  .home,
+  .courseinfo {
     height: 100vh;
     width: 100%;
-    margin: 0px;
+    margin: 0;
     padding: 2%;
   }
 
   .coursecontainer {
     height: 100vh;
     width: 100%;
-    margin: 0px;
+    margin: 0;
   }
+
   .coursecontent {
     padding: 3%;
   }
 
-  .homecontent,.coursecontent,.alldetail {
-    width:100%;
+  .homecontent,
+  .coursecontent,
+  .alldetail {
+    width: 100%;
     height: 100%;
   }
 
-.easynav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+  .easynav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 
-.loginitem,.signupitem,.courseitem {
-  margin-top:15%;
-}
+  .loginitem,
+  .signupitem,
+  .courseitem {
+    margin-top: 15%;
+  }
 
-.infocontent{
-height: 60vh;
-overflow: auto;}
+  .infocontent {
+    height: 60vh;
+    overflow: auto;
+  }
 
-.percentinfo h1 {
-  font-size: 150%;
-}
+  .percentinfo h1 {
+    font-size: 150%;
+  }
 
-.detailinfo h4 {
-  font-size: 100%;
-}
-.detailinfo i {
-  font-size: 100%;
-}
-.courseinfo {
-  background-color: white;
-}
-.home {
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-  background-repeat: no-repeat;
-  color:white;
-}
+  .detailinfo h4 {
+    font-size: 100%;
+  }
 
+  .detailinfo i {
+    font-size: 100%;
+  }
 
+  .courseinfo {
+    background-color: white;
+  }
+
+  .home {
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    background-repeat: no-repeat;
+    color: white;
+  }
 }
