@@ -1,6 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {
-  BrowserRouter as Router, Route, Switch,
+  BrowserRouter as Router, Route, Switch, Redirect,
 } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Home from './components/home';
@@ -16,6 +16,9 @@ const App = () => (
     <div className="App">
       <Navbar />
       <Switch>
+        <Route exact path="/">
+          <Redirect to="/login" />
+        </Route>
         <Route exac path="/home" component={Home} />
         <Route exac path="/login" component={Login} />
         <Route exac path="/signup" component={Signup} />

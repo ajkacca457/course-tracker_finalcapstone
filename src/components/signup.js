@@ -39,7 +39,7 @@ const Signup = () => (
           <input
             type="password"
             className="form-control"
-            id="password"
+            id="passwordconfirm"
             placeholder="Confirm password"
           />
         </div>
@@ -53,8 +53,8 @@ const Signup = () => (
       </form>
 
       <div className="signupinfo text-right">
-        <p className="mt-2 mb-0 mt-2 mb-0 w-25 ml-auto text-center">Already have an account?</p>
-        <Link to="/login" className="nav-link m-0 bg-danger w-25 text-center text-white rounded ml-auto">Login</Link>
+        <p className="mt-2 mb-0 mt-2 mb-0 w-25 ml-auto text-center tagline">Already have an account?</p>
+        <Link to="/login" className="nav-link m-0 bg-danger w-25 text-center text-white rounded ml-auto tagbtn">Login</Link>
       </div>
 
     </div>

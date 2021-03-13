@@ -127,4 +127,9 @@ body {
     background-repeat: no-repeat;
     color: white;
   }
+
+  .tagline,.tagbtn {
+    font-size: 80%;
+  }
+
 }
