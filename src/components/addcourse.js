@@ -1,4 +1,5 @@
 import React from 'react';
+import Easynav from './easynav';
 
 const Addcourse = () => (
   <div className="logincont">
@@ -64,6 +65,7 @@ const Addcourse = () => (
         </button>
       </form>
     </div>
+    <Easynav />
   </div>
 );
 

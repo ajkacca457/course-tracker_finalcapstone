@@ -1,4 +1,5 @@
 import React from 'react';
+import Easynav from './easynav';
 
 const Courseinfo = () => (
   <div className="courseinfo">
@@ -52,6 +53,7 @@ const Courseinfo = () => (
       </div>
 
     </div>
+    <Easynav />
   </div>
 );
 

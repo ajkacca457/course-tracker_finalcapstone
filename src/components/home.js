@@ -1,4 +1,5 @@
 import React from 'react';
+import Easynav from './easynav';
 
 const Home = () => (
   <div className="home">
@@ -11,6 +12,7 @@ const Home = () => (
       Course tracker allows you to track progress of the courses you are taking.
       It is an effective app to make your learning process easy.
     </p>
+    <Easynav />
   </div>
 );
 

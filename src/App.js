@@ -9,7 +9,6 @@ import Signup from './components/signup';
 import Addcourse from './components/addcourse';
 import Coursecontainer from './containers/coursecontainer';
 import Courseinfo from './components/courseinfo';
-import Easynav from './components/easynav';
 
 const App = () => (
   <Router>
@@ -26,7 +25,6 @@ const App = () => (
         <Route exac path="/courses" component={Coursecontainer} />
         <Route exac path="/courseinfo" component={Courseinfo} />
       </Switch>
-      <Easynav />
     </div>
   </Router>
 );

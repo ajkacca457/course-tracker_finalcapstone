@@ -1,4 +1,5 @@
 import React from 'react';
+import Easynav from '../components/easynav';
 
 const Coursecontainer = () => (
   <div className="coursecontainer">
@@ -22,7 +23,7 @@ const Coursecontainer = () => (
       </div>
 
     </div>
-
+    <Easynav />
   </div>
 );
 
