@@ -22,8 +22,8 @@ const App = () => (
         <Route exac path="/login" component={Login} />
         <Route exac path="/signup" component={Signup} />
         <Route exac path="/addcourse" component={Addcourse} />
+        <Route exac path="/courses/:id" component={Singlecourse} />
         <Route exac path="/courses" component={Coursecontainer} />
-        <Route exac path="/course" component={Singlecourse} />
       </Switch>
     </div>
   </Router>

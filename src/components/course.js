@@ -1,12 +1,14 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const Course = props => {
   const {
     course: {
+      id,
       name,
       number_of_lessons,
       lesson_completed,
@@ -26,14 +28,14 @@ const Course = props => {
               text={`${percentage.toFixed()}%`}
               styles={buildStyles({
                 // Colors
-                pathColor: '#38697a',
+                pathColor: '#FF7F7F',
                 textColor: '#194775',
                 trailColor: '#D2D2D2',
                 backgroundColor: '#3e98c7',
               })}
             />
           </div>
-          <button type="button" className=" bg-primary rounded border-0 text-white view-btn p-1">view info</button>
+          <Link to={`/courses/${id}`} className=" bg-primary w-50 rounded text-center border-0 text-white view-btn p-1 ml-auto">view info</Link>
         </div>
       </div>
     </div>
@@ -42,6 +44,7 @@ const Course = props => {
 
 Course.propTypes = {
   course: PropTypes.shape({
+    id: PropTypes.number,
     name: PropTypes.string,
     number_of_lessons: PropTypes.number,
     lesson_completed: PropTypes.number,
