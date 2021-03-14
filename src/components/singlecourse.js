@@ -1,7 +1,7 @@
 import React from 'react';
 import Easynav from './easynav';
 
-const Courseinfo = () => (
+const Singlecourse = () => (
   <div className="courseinfo">
     <div className="alldetail">
       <div className="infocontent text-center rounded">
@@ -57,4 +57,4 @@ const Courseinfo = () => (
   </div>
 );
 
-export default Courseinfo;
+export default Singlecourse;
