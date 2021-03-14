@@ -73,6 +73,12 @@ body {
   margin-top: 1%;
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+
+}
+
 @media screen and (max-width: 500px) {
   .logincont,
   .home,
@@ -148,6 +154,9 @@ body {
 
   .tagline,
   .tagbtn {
+    font-size: 80%;
+  }
+  .course-item,.view-btn {
     font-size: 80%;
   }
 }
