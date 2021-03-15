@@ -18,8 +18,6 @@ const Coursecontainer = ({
     fetchCourses('https://shrouded-peak-00466.herokuapp.com/api/v1/courses');
   }, []);
 
-  console.log(courses.courses);
-
   if (loading) {
     return (<Loading />);
   } if (courses.courses) {

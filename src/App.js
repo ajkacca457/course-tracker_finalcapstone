@@ -9,6 +9,7 @@ import Signup from './components/signup';
 import Addcourse from './components/addcourse';
 import Coursecontainer from './containers/coursecontainer';
 import Singlecourse from './components/singlecourse';
+import Progress from './containers/reportcont';
 
 const App = () => (
   <Router>
@@ -24,6 +25,7 @@ const App = () => (
         <Route exac path="/addcourse" component={Addcourse} />
         <Route exac path="/courses/:id" component={Singlecourse} />
         <Route exac path="/courses" component={Coursecontainer} />
+        <Route exac path="/progress" component={Progress} />
       </Switch>
     </div>
   </Router>

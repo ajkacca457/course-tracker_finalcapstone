@@ -22,7 +22,7 @@ const Course = props => {
       <div className="course-item card border-2 mb-2 bg-light">
         <div className="content justify-content-between align-items-center p-1">
           <p className="name">{name}</p>
-          <div className="progresscont w-25 text-right">
+          <div className="progresscont text-right">
             <CircularProgressbar
               value={percentage.toFixed()}
               text={`${percentage.toFixed()}%`}
@@ -31,7 +31,7 @@ const Course = props => {
                 pathColor: '#FF7F7F',
                 textColor: '#194775',
                 trailColor: '#D2D2D2',
-                backgroundColor: '#3e98c7',
+                backgroundColor: '#3e98c',
               })}
             />
           </div>

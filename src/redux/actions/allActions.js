@@ -23,6 +23,7 @@ export const fetchCourses = url => (dispatch => {
     .then(response => {
       const courses = response.data;
       dispatch(fetchCoursesSuccess(courses));
+      window.localStorage.setItem('courses', JSON.stringify(courses));
     })
     .catch(error => {
       const errorMsg = error.message;

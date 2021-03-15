@@ -27,7 +27,7 @@ const Easynav = () => (
       </div>
 
       <div className="nav-item-easy">
-        <Link to="/courseinfo" className="text-white">
+        <Link to="/progress" className="text-white">
           <i className="fas fa-chart-pie" />
           <p>Report</p>
         </Link>
