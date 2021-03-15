@@ -78,6 +78,13 @@ margin: 5% auto
   font-family: 'Roboto Slab', serif;
 }
 
+.logo {
+  width: 25%;
+}
+.homeinfo {
+  width: 50%;
+  margin: auto;
+}
 .navcont {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -133,6 +140,11 @@ margin: 5% auto
 
   .coursecontent {
     padding: 3%;
+  }
+
+  .homeinfo {
+    width: 80%;
+    margin: auto;
   }
 
   .homecontent,
