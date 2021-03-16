@@ -43,7 +43,7 @@ margin: 5% auto
 
 .coursecontainer,
 .courseinfo {
-  margin: 2% auto;
+  margin: 4% auto;
   width: 50%;
   height: 100vh;
   font-family: 'Roboto Slab', serif;
@@ -64,6 +64,11 @@ margin: 5% auto
   padding: 1%;
 }
 
+.coursecontent {
+  height: 70vh;
+  overflow-y:scroll;
+}
+
 .home {
   width: 50%;
   margin: 2% auto;
@@ -71,10 +76,12 @@ margin: 5% auto
 
 .progress-cont{
   width: 50%;
-  margin: 2% auto;
+  margin: 4% auto;
   background-color: white;
   text-align: center;
   padding: 2%;
+  height: 60vh;
+  overflow-y: scroll;
 }
 
 .infocontent {
@@ -130,7 +137,7 @@ margin: 5% auto
   width: 30%;
 }
 .reportbar {
-  width: 40%;
+  width: 20%;
   margin: auto;
 }
 
@@ -238,6 +245,11 @@ margin: 5% auto
   .reportbar {
     width: 40%;
     margin: auto;
+  }
+
+  .coursecontent {
+    height: 90vh;
+    overflow-y:scroll;
   }
 
 }

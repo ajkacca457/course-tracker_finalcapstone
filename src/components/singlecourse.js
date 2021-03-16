@@ -2,15 +2,17 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable consistent-return */
 /* eslint-disable max-len */
-
+import axios from 'axios';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
+
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Easynav from './easynav';
 
 const Singlecourse = () => {
   const courses = JSON.parse(window.localStorage.getItem('courses'));
   const { id } = useParams();
+  const history = useHistory();
   const course = courses.courses.filter(item => Number(id) === item.id);
   const percentcom = (course[0].lesson_completed / course[0].number_of_lessons) * 100;
   const percentrem = 100 - ((course[0].lesson_completed / course[0].number_of_lessons) * 100);
@@ -19,6 +21,19 @@ const Singlecourse = () => {
   const month = createdat.getMonth();
   const year = createdat.getFullYear();
   const date = `${day}/${month}/${year}`;
+
+  const handledelete = id => {
+    axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`).then(response => {
+      console.log(response);
+      alert('course deleted successfully ');
+      history.push('/courses');
+    })
+      .catch(error => {
+        console.log(error);
+        alert('course cannot be deleted');
+      });
+  };
+
   return (
     <div className="courseinfo">
       <div className="alldetail">
@@ -111,7 +126,7 @@ const Singlecourse = () => {
 
         <div className="btncont my-2 text-center">
           <button type="button" className="btn btn-success w-75 mb-2">Update Progress</button>
-          <button type="button" className="btn btn-danger w-75 mb-2">Delete Course</button>
+          <button type="button" className="btn btn-danger w-75 mb-2" onClick={() => { handledelete(id); }}>Delete Course</button>
         </div>
 
       </div>
