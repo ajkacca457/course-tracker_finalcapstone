@@ -108,6 +108,25 @@ margin: 5% auto
   padding: 1%;
 }
 
+.courseinfo {
+  position: relative;
+}
+
+.updateformcont {
+  position: absolute;
+  width: 100%;
+  height:75%;
+  background-color:rgba(51, 174, 219, 0.50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.updateform {
+  width:50%;
+  height:;
+}
+
 .easynav {
   position: fixed;
   bottom: 0;
@@ -250,6 +269,17 @@ margin: 5% auto
   .coursecontent {
     height: 90vh;
     overflow-y:scroll;
+  }
+
+  .updateformcont {
+    position: absolute;
+    width: 100%;
+    height:90%;
+  }
+
+  .updateform {
+    width:80%;
+    height:;
   }
 
 }

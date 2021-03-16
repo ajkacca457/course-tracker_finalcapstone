@@ -2,10 +2,10 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable consistent-return */
 /* eslint-disable max-len */
+/* eslint-disable*/
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Easynav from './easynav';
 
@@ -21,6 +21,12 @@ const Singlecourse = () => {
   const month = createdat.getMonth();
   const year = createdat.getFullYear();
   const date = `${day}/${month}/${year}`;
+  const [display, setDisplay] = useState(false);
+  const [name, setName] = useState(course[0].name);
+  const [numberoflessons, setNumberoflessons] = useState(course[0].number_of_lessons);
+  const [lessoncompleted, setLessoncompleted] = useState(course[0].lesson_completed);
+  const [hoursneed, setHoursneed] = useState(course[0].hours_needed);
+  const [hoursspend, setHoursspend] = useState(course[0].hours_spend);
 
   const handledelete = id => {
     axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`).then(response => {
@@ -34,8 +40,112 @@ const Singlecourse = () => {
       });
   };
 
+  const handleupdateform=()=>{
+    setDisplay(true);
+  }
+  const handleupdatecancel=()=>{
+    setDisplay(false);
+  }
+  const handleupdatesubmit=(e,id)=>{
+      e.preventDefault();
+      const courseupdateinfo = {
+        name,
+        number_of_lessons: numberoflessons,
+        lesson_completed: lessoncompleted,
+        hours_needed: hoursneed,
+        hours_spend: hoursspend,
+      };
+
+      axios.put(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`, courseupdateinfo, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then(response => {
+        console.log(response);
+        history.push('/courses');
+        alert('course updated successfully ');
+      })
+        .catch(error => {
+          console.log(error);
+          alert('course cannot be updated, try again');
+        });
+      setDisplay(false);
+    }
+
+
   return (
     <div className="courseinfo">
+    <div className={display?"updateformcont":"d-none"}>
+      <div className="updateform bg-light p-2">
+      <div className="headcont d-flex justify-content-between">
+      <h3 className="text-center text-dark">Update Course</h3>
+      <i className="fas fa-times" onClick={handleupdatecancel}></i>
+      </div>
+        <form onSubmit={(e)=>{handleupdatesubmit(e,id)}}>
+          <div className="form-group text-left">
+            <input
+              onChange={(e)=>{setName(e.target.value)}}
+              type="text"
+              className="form-control"
+              defaultValue={course[0].name}
+              id="course-name"
+              placeholder="Enter course name"
+            />
+          </div>
+          <div className="form-group text-left">
+            <input
+              onChange={(e)=>{setNumberoflessons(e.target.value)}}
+              type="number"
+              className="form-control"
+              id="numberoflessons"
+              defaultValue={course[0].number_of_lessons}
+              placeholder="Enter number of lessons"
+            />
+          </div>
+
+          <div className="form-group text-left">
+            <input
+              onChange={(e)=>{setLessoncompleted(e.target.value)}}
+              type="number"
+              className="form-control"
+              id="lessoncompleted"
+              defaultValue={course[0].lesson_completed}
+              placeholder="Number of lessons completed"
+            />
+          </div>
+
+          <div className="form-group text-left">
+            <input
+              onChange={(e)=>{setHoursneed(e.target.value)}}
+              type="number"
+              className="form-control"
+              id="hoursneeded"
+              defaultValue={course[0].hours_needed}
+              placeholder="hours needed to complete the course"
+            />
+          </div>
+
+          <div className="form-group text-left">
+            <input
+              onChange={(e)=>{setHoursspend(e.target.value)}}
+              type="number"
+              className="form-control"
+              id="hoursspend"
+              defaultValue={course[0].hours_spend}
+              placeholder="hours spend on the course"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="btn btn-success w-100"
+          >
+           Submit
+          </button>
+        </form>
+      </div>
+      </div>
+
       <div className="alldetail">
         <div className="infocontent text-center rounded">
           <h3>{course[0].name}</h3>
@@ -125,7 +235,7 @@ const Singlecourse = () => {
         </div>
 
         <div className="btncont my-2 text-center">
-          <button type="button" className="btn btn-success w-75 mb-2">Update Progress</button>
+          <button type="button" className="btn btn-success w-75 mb-2" onClick={handleupdateform}>Update Progress</button>
           <button type="button" className="btn btn-danger w-75 mb-2" onClick={() => { handledelete(id); }}>Delete Course</button>
         </div>
 
@@ -137,3 +247,4 @@ const Singlecourse = () => {
 };
 
 export default Singlecourse;
+/* eslint-disable*/
