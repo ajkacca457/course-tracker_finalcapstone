@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {
-  FETCH_COURSES_REQUEST, FETCH_COURSES_SUCCESS, FETCH_COURSES_FAILURE,
+  FETCH_COURSES_REQUEST, FETCH_COURSES_SUCCESS, FETCH_COURSES_FAILURE, ADD_NEW_USER,
 } from './type';
 
 export const fetchCoursesRequest = () => ({
@@ -17,9 +17,19 @@ export const fetchCoursesFaluire = error => ({
   payload: error,
 });
 
+export const addUserSuccess = response => ({
+  type: ADD_NEW_USER,
+  payload: response,
+});
+
 export const fetchCourses = url => (dispatch => {
   dispatch(fetchCoursesRequest());
-  axios.get(url)
+  axios.get(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg',
+    },
+  })
     .then(response => {
       const courses = response.data;
       dispatch(fetchCoursesSuccess(courses));
@@ -28,5 +38,21 @@ export const fetchCourses = url => (dispatch => {
     .catch(error => {
       const errorMsg = error.message;
       dispatch(fetchCoursesFaluire(errorMsg));
+    });
+});
+
+export const addUser = (url, obj, route) => (dispatch => {
+  axios.post(url, obj, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then(response => {
+    console.log(response);
+    dispatch(addUserSuccess(response));
+    window.localStorage.setItem('user', JSON.stringify(response));
+    route.push('/home');
+  })
+    .catch(error => {
+      console.log(error);
     });
 });

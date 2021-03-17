@@ -29,7 +29,12 @@ const Singlecourse = () => {
   const [hoursspend, setHoursspend] = useState(course[0].hours_spend);
 
   const handledelete = id => {
-    axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`).then(response => {
+    axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`,{
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg'
+      }
+    }).then(response => {
       console.log(response);
       alert('course deleted successfully ');
       history.push('/courses');
@@ -59,6 +64,7 @@ const Singlecourse = () => {
       axios.put(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`, courseupdateinfo, {
         headers: {
           'Content-Type': 'application/json',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg'
         },
       }).then(response => {
         console.log(response);

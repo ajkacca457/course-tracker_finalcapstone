@@ -24,6 +24,7 @@ const Addcourse = () => {
     axios.post('https://shrouded-peak-00466.herokuapp.com/api/v1/courses', courseinfo, {
       headers: {
         'Content-Type': 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg',
       },
     }).then(response => {
       console.log(response);
