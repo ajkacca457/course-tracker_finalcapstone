@@ -93,6 +93,6 @@ export const loginUser = (url, obj, route) => (dispatch => {
 
 export const logOut = route => dispatch => {
   dispatch(logoutUserSuccess());
-  localStorage.clear();
+  localStorage.removeItem('user');
   route.push('/login');
 };
