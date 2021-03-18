@@ -30,8 +30,6 @@ const Singlecourse = () => {
   const user = JSON.parse(window.localStorage.getItem('user'));
   const { token } = user.data;
 
-  console.log(token);
-
   const handledelete = (id, token) => {
     axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`, {
       headers: {

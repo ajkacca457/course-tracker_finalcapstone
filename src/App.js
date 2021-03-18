@@ -20,7 +20,6 @@ const App = () => (
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>
-
         <Route exac path="/login" component={Login} />
         <Route exac path="/signup" component={Signup} />
         <Route exac path="/home">

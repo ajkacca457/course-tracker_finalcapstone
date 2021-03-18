@@ -8,14 +8,15 @@ This is a capstone project of microverse redux-react module. This is a catalogue
 ## Project Display
 ![screenshot](./src/images/interface1.PNG)
 ![screenshot](./src/images/interface2.PNG)
-![screenshot](./src/images/interface4.PNG)
 ![screenshot](./src/images/interface3.PNG)
 ![screenshot](./src/images/interface4.PNG)
 ![screenshot](./src/images/interface5.PNG)
+![screenshot](./src/images/interface6.PNG)
+![screenshot](./src/images/interface7.PNG)
 
 ## Live Demo
 
-[Course_Tracker](https://course-tracker-front.netlify.app/)
+[Course_Tracker](https://course-tracker-front.netlify.app/login)
 
 ## Built With
 

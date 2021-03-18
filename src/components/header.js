@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import { logOut } from '../redux/actions/allActions';
 
 const Header = ({ loggedin, logOut }) => {
-  console.log(loggedin);
-
   const history = useHistory();
 
   const handlelogout = history => {

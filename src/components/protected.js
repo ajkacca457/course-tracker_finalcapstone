@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 const Protected = ({ loggedin, Cmp }) => {
   console.log(loggedin);
-  console.log(Cmp);
-
   return loggedin ? (
     <>
       <Cmp />
