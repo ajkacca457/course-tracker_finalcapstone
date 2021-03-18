@@ -11,6 +11,9 @@ const Addcourse = () => {
   const [hoursspend, setHoursspend] = useState('');
   const history = useHistory();
 
+  const user = JSON.parse(window.localStorage.getItem('user'));
+  const { token } = user.data;
+
   const handleSubmit = e => {
     e.preventDefault();
     const courseinfo = {
@@ -24,7 +27,7 @@ const Addcourse = () => {
     axios.post('https://shrouded-peak-00466.herokuapp.com/api/v1/courses', courseinfo, {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo',
+        Authorization: `Bearer ${token}`,
       },
     }).then(response => {
       console.log(response);

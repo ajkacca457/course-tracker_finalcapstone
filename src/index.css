@@ -21,6 +21,11 @@ body {
   border-radius: 10px;
 }
 
+.logout {
+  background: transparent;
+  border: none;
+}
+
 .header {
   position: fixed;
   width: 100%;

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {
   FETCH_COURSES_REQUEST, FETCH_COURSES_SUCCESS, FETCH_COURSES_FAILURE, ADD_NEW_USER,
+  LOGIN_NEW_USER, LOGOUT_USER,
 } from './type';
 
 export const fetchCoursesRequest = () => ({
@@ -22,12 +23,21 @@ export const addUserSuccess = response => ({
   payload: response,
 });
 
-export const fetchCourses = url => (dispatch => {
+export const loginUserSuccess = response => ({
+  type: LOGIN_NEW_USER,
+  payload: response,
+});
+
+export const logoutUserSuccess = () => ({
+  type: LOGOUT_USER,
+});
+
+export const fetchCourses = (url, token) => (dispatch => {
   dispatch(fetchCoursesRequest());
   axios.get(url, {
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo',
+      Authorization: `Bearer ${token}`,
     },
   })
     .then(response => {
@@ -50,9 +60,39 @@ export const addUser = (url, obj, route) => (dispatch => {
     console.log(response);
     dispatch(addUserSuccess(response));
     window.localStorage.setItem('user', JSON.stringify(response));
-    route.push('/home');
+    if (response.data.error) {
+      alert('invalid user');
+    } else {
+      route.push('/home');
+    }
   })
     .catch(error => {
       console.log(error);
     });
 });
+
+export const loginUser = (url, obj, route) => (dispatch => {
+  axios.post(url, obj, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then(response => {
+    console.log(response);
+    dispatch(loginUserSuccess(response));
+    window.localStorage.setItem('user', JSON.stringify(response));
+    if (response.data.error) {
+      alert('invalid user');
+    } else {
+      route.push('/home');
+    }
+  })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
+export const logOut = route => dispatch => {
+  dispatch(logoutUserSuccess());
+  localStorage.clear();
+  route.push('/login');
+};

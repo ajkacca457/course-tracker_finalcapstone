@@ -27,12 +27,16 @@ const Singlecourse = () => {
   const [lessoncompleted, setLessoncompleted] = useState(course[0].lesson_completed);
   const [hoursneed, setHoursneed] = useState(course[0].hours_needed);
   const [hoursspend, setHoursspend] = useState(course[0].hours_spend);
+  const user = JSON.parse(window.localStorage.getItem('user'));
+  const { token } = user.data;
 
-  const handledelete = id => {
+  console.log(token);
+
+  const handledelete = (id,token) => {
     axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`,{
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo'
+        Authorization: `Bearer ${token}`,
       }
     }).then(response => {
       console.log(response);
@@ -51,7 +55,7 @@ const Singlecourse = () => {
   const handleupdatecancel=()=>{
     setDisplay(false);
   }
-  const handleupdatesubmit=(e,id)=>{
+  const handleupdatesubmit=(e,id,token)=>{
       e.preventDefault();
       const courseupdateinfo = {
         name,
@@ -64,7 +68,7 @@ const Singlecourse = () => {
       axios.put(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`, courseupdateinfo, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo'
+          Authorization: `Bearer ${token}`,
         },
       }).then(response => {
         console.log(response);
@@ -87,7 +91,7 @@ const Singlecourse = () => {
       <h3 className="text-center text-dark">Update Course</h3>
       <i className="fas fa-times" onClick={handleupdatecancel}></i>
       </div>
-        <form onSubmit={(e)=>{handleupdatesubmit(e,id)}}>
+        <form onSubmit={(e)=>{handleupdatesubmit(e,id,token)}}>
           <div className="form-group text-left">
             <input
               onChange={(e)=>{setName(e.target.value)}}
@@ -242,7 +246,7 @@ const Singlecourse = () => {
 
         <div className="btncont my-2 text-center d-flex justify-content-center">
           <button type="button" className="btn btn-success w-50 mb-2 mr-2 ubtn" onClick={handleupdateform}>Update Progress</button>
-          <button type="button" className="btn btn-danger w-50 mb-2 ubtn" onClick={() => { handledelete(id); }}>Delete Course</button>
+          <button type="button" className="btn btn-danger w-50 mb-2 ubtn" onClick={() => { handledelete(id,token); }}>Delete Course</button>
         </div>
 
       </div>

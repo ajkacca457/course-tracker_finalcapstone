@@ -14,8 +14,11 @@ import Loading from '../components/loading';
 const Coursecontainer = ({
   loading, courses, fetchCourses,
 }) => {
+  const user = JSON.parse(window.localStorage.getItem('user'));
+  const { token } = user.data;
+
   useEffect(() => {
-    fetchCourses('https://shrouded-peak-00466.herokuapp.com/api/v1/courses');
+    fetchCourses('https://shrouded-peak-00466.herokuapp.com/api/v1/courses', token);
   }, []);
 
   if (loading) {
@@ -48,7 +51,7 @@ const mapStateToProps = state => (
   });
 
 const mapDispatchToProps = dispatch => ({
-  fetchCourses: url => dispatch(fetchCourses(url)),
+  fetchCourses: (url, token) => dispatch(fetchCourses(url, token)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Coursecontainer);
