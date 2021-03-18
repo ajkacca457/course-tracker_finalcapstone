@@ -180,6 +180,12 @@ margin: 5% auto
   margin: auto;
 }
 
+.cbtn {
+  font-size:80%;
+  background:transparent;
+  color:red;
+  border: none;
+}
 @media screen and (max-width: 500px) {
   .logincont,
   .home {

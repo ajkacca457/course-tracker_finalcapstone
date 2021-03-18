@@ -1,24 +1,23 @@
-/* eslint-disable*/
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory,Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Protected = ({ loggedin, Cmp }) => {
   console.log(loggedin);
   console.log(Cmp);
 
-  return loggedin? (
+  return loggedin ? (
     <>
       <Cmp />
     </>
   )
-  : <Redirect to={{ pathname: '/login' }} />;
+    : <Redirect to={{ pathname: '/login' }} />;
 };
 
 Protected.propTypes = {
   loggedin: PropTypes.bool.isRequired,
-  Cmp: PropTypes.object.isRequired,
+  Cmp: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -26,4 +25,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(Protected);
-/* eslint-enable */

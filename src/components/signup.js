@@ -1,5 +1,4 @@
-/*eslint-disable */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -10,9 +9,7 @@ const Signup = ({ addUser }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const history= useHistory();
-
-  const user = JSON.parse(window.localStorage.getItem('user'));
+  const history = useHistory();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -22,9 +19,9 @@ const Signup = ({ addUser }) => {
       password,
       email,
     };
-    if(name===""|| username==="" ||password==="" || email===""){
-      alert("please add all the information");
-    } else{
+    if (name === '' || username === '' || password === '' || email === '') {
+      alert('please add all the information');
+    } else {
       addUser('https://shrouded-peak-00466.herokuapp.com/api/v1/users', userinfo, history);
     }
   };
@@ -99,4 +96,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(Signup);
-/*eslint-disable */
