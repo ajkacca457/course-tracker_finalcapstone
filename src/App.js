@@ -2,8 +2,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import {
   BrowserRouter as Router, Route, Switch, Redirect,
 } from 'react-router-dom';
-import Navbar from './components/navbar';
 import Home from './components/home';
+import Header from './components/header';
 import Login from './components/login';
 import Signup from './components/signup';
 import Addcourse from './components/addcourse';
@@ -14,7 +14,7 @@ import Progress from './containers/reportcont';
 const App = () => (
   <Router>
     <div className="App">
-      <Navbar />
+      <Header />
       <Switch>
         <Route exact path="/">
           <Redirect to="/login" />

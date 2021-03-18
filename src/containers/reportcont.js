@@ -31,7 +31,7 @@ const Progress = () => {
         <p>Progress Score:</p>
         <CircularProgressbar
           value={progressscore.toFixed()}
-          text={`${progressscore.toFixed()}%`}
+          text={`${progressscore.toFixed().isNaN ? 0 : progressscore.toFixed()}%`}
           styles={buildStyles({
             // Colors
             pathColor: 'orangered',
@@ -43,7 +43,7 @@ const Progress = () => {
         <p className="mt-2">Time management score:</p>
         <CircularProgressbar
           value={timescore.toFixed()}
-          text={`${timescore.toFixed()}%`}
+          text={`${timescore.toFixed().isNaN ? 0 : timescore.toFixed()}%`}
           styles={buildStyles({
             // Colors
             pathColor: 'orange',

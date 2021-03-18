@@ -22,15 +22,15 @@ const Signup = ({ addUser }) => {
       password,
       email,
     };
-    addUser('https://shrouded-peak-00466.herokuapp.com/api/v1/users', userinfo, history);
+    if(name===""|| username==="" ||password==="" || email===""){
+      alert("please add all the information");
+    } else{
+      addUser('https://shrouded-peak-00466.herokuapp.com/api/v1/users', userinfo, history);
+    }
   };
 
   return (
     <div className="logincont">
-      <h4 className="bg-dark text-white text-center p-2">
-        <i className="fas fa-chalkboard-teacher mr-3" />
-        Course Tracker
-      </h4>
       <div className=" bg-white mx-auto p-2 rounded signupitem">
         <h4 className="text-center bg-info py-2 text-white mb-3 rounded">Sign up for free!</h4>
         <form onSubmit={e => { handleSubmit(e); }}>

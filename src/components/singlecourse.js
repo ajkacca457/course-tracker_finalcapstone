@@ -32,7 +32,7 @@ const Singlecourse = () => {
     axios.delete(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`,{
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg'
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo'
       }
     }).then(response => {
       console.log(response);
@@ -64,7 +64,7 @@ const Singlecourse = () => {
       axios.put(`https://shrouded-peak-00466.herokuapp.com/api/v1/courses/${id}`, courseupdateinfo, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg'
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxN30.IOsie39H8JzkOSuGptKc1UmBZ512Zzaz56bIxyZFRGo'
         },
       }).then(response => {
         console.log(response);
@@ -240,9 +240,9 @@ const Singlecourse = () => {
           </div>
         </div>
 
-        <div className="btncont my-2 text-center">
-          <button type="button" className="btn btn-success w-75 mb-2" onClick={handleupdateform}>Update Progress</button>
-          <button type="button" className="btn btn-danger w-75 mb-2" onClick={() => { handledelete(id); }}>Delete Course</button>
+        <div className="btncont my-2 text-center d-flex justify-content-center">
+          <button type="button" className="btn btn-success w-50 mb-2 mr-2 ubtn" onClick={handleupdateform}>Update Progress</button>
+          <button type="button" className="btn btn-danger w-50 mb-2 ubtn" onClick={() => { handledelete(id); }}>Delete Course</button>
         </div>
 
       </div>
