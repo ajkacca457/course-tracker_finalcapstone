@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Easynav from './easynav';
 
 const Addcourse = () => {
@@ -30,13 +31,11 @@ const Addcourse = () => {
         Authorization: `Bearer ${token}`,
       },
     }).then(response => {
-      console.log(response);
-      alert('course added successfully ');
+      toast.success(`course added successfully. status: ${response.status}`);
       history.push('/courses');
     })
       .catch(error => {
-        console.log(error);
-        alert('course cannot be added, dont leave any field blank');
+        toast.error(`course cannot be added. ${error}`);
       });
   };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { connect } from 'react-redux';
 import { addUser } from '../redux/actions/allActions';
 
@@ -20,9 +21,10 @@ const Signup = ({ addUser }) => {
       email,
     };
     if (name === '' || username === '' || password === '' || email === '') {
-      alert('please add all the information');
+      toast.error('please add all the information');
     } else {
       addUser('https://shrouded-peak-00466.herokuapp.com/api/v1/users', userinfo, history);
+      toast.success('New user created');
     }
   };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { toast } from 'react-toastify';
 import { loginUser } from '../redux/actions/allActions';
 
 const Login = ({ loginUser }) => {
@@ -16,9 +17,10 @@ const Login = ({ loginUser }) => {
       password,
     };
     if (username === '' || password === '') {
-      alert('please enter userinfo');
+      toast.error('please enter userinfo');
     } else {
       loginUser('https://shrouded-peak-00466.herokuapp.com/api/v1/login', userinfo, history);
+      toast.success('login successful');
     }
   };
 

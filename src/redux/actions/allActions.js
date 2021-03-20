@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import {
   FETCH_COURSES_REQUEST, FETCH_COURSES_SUCCESS, FETCH_COURSES_FAILURE, ADD_NEW_USER,
   LOGIN_NEW_USER, LOGOUT_USER,
@@ -57,17 +58,16 @@ export const addUser = (url, obj, route) => (dispatch => {
       'Content-Type': 'application/json',
     },
   }).then(response => {
-    console.log(response);
     dispatch(addUserSuccess(response));
     window.localStorage.setItem('user', JSON.stringify(response));
     if (response.data.error) {
-      alert('invalid user');
+      toast.error('invalid user');
     } else {
       route.push('/home');
     }
   })
     .catch(error => {
-      console.log(error);
+      toast.error(`error: ${error}`);
     });
 });
 
@@ -77,17 +77,16 @@ export const loginUser = (url, obj, route) => (dispatch => {
       'Content-Type': 'application/json',
     },
   }).then(response => {
-    console.log(response);
     dispatch(loginUserSuccess(response));
     window.localStorage.setItem('user', JSON.stringify(response));
     if (response.data.error) {
-      alert('invalid user');
+      toast.error('invalid user');
     } else {
       route.push('/home');
     }
   })
     .catch(error => {
-      console.log(error);
+      toast.error(`error: ${error}`);
     });
 });
 

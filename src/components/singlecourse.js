@@ -6,6 +6,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Easynav from './easynav';
 
@@ -37,13 +38,11 @@ const Singlecourse = () => {
         Authorization: `Bearer ${token}`,
       },
     }).then(response => {
-      console.log(response);
-      alert('course deleted successfully ');
+      toast.success(`course deleted successfully. status: ${response.status}`);
       history.push('/courses');
     })
       .catch(error => {
-        console.log(error);
-        alert('course cannot be deleted');
+        toast.error(`course cannot be deleted. ${error}`);
       });
   };
 
@@ -69,13 +68,11 @@ const Singlecourse = () => {
         Authorization: `Bearer ${token}`,
       },
     }).then(response => {
-      console.log(response);
       history.push('/courses');
-      alert('course updated successfully ');
+      toast.success(`course updated successfully. status: ${response.status}`);
     })
       .catch(error => {
-        console.log(error);
-        alert('course cannot be updated, try again');
+        toast.error(`course cannot be updated. ${error}`);
       });
     setDisplay(false);
   };

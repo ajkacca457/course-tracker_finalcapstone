@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { connect } from 'react-redux';
 import { logOut } from '../redux/actions/allActions';
 
@@ -9,6 +10,7 @@ const Header = ({ loggedin, logOut }) => {
 
   const handlelogout = history => {
     logOut(history);
+    toast.success('logout successful');
   };
 
   return (

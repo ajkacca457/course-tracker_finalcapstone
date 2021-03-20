@@ -2,6 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import {
   BrowserRouter as Router, Route, Switch, Redirect,
 } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Home from './components/home';
 import Header from './components/header';
 import Login from './components/login';
@@ -11,10 +12,22 @@ import Coursecontainer from './containers/coursecontainer';
 import Singlecourse from './components/singlecourse';
 import Progress from './containers/reportcont';
 import Protected from './components/protected';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => (
   <Router>
     <div className="App">
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Header />
       <Switch>
         <Route exact path="/">
