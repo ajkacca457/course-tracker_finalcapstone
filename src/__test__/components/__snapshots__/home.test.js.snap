@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component renders correctly 1`] = `
+<div
+  className="home"
+>
+  <p
+    className="text-justify"
+  >
+    Course tracker allows you to track progress of the courses you are taking. It is an effective app to make your learning process easy.
+  </p>
+  <div
+    className="imgcont text-center bg-white py-3"
+  >
+    <img
+      alt="symbol for tracker"
+      className="logo"
+      src="tracker.jpg"
+    />
+    <div
+      className="homeinfo"
+    >
+      <h4
+        className="text-left text-dark"
+      >
+        Using this App you can:
+      </h4>
+      <ul
+        className="text-left text-dark"
+      >
+        <li>
+          Add new courses to your tracker.
+        </li>
+        <li>
+          See progress of each courses.
+        </li>
+        <li>
+          Modify and update your progress of the courses.
+        </li>
+        <li>
+          Once you completed the course you can delete it.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="easynav"
+  >
+    <div
+      className="navcont text-white bg-dark"
+    >
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/home"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-home"
+          />
+          <p>
+            Home
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/addcourse"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus-circle"
+          />
+          <p>
+            Add Course
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/courses"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-chart-line"
+          />
+          <p>
+            Track
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/progress"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-chart-pie"
+          />
+          <p>
+            Report
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

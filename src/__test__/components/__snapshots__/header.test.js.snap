@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component renders correctly 1`] = `
+<div
+  className="header bg-dark px-2 my-0 d-flex justify-content-between align-items-center"
+>
+  <h4
+    className="text-center text-white pt-1 mb-3"
+  >
+    <i
+      className="fas fa-chalkboard-teacher"
+    />
+     
+    Course Tracker
+  </h4>
+  <button
+    className="d-none"
+    onClick={[Function]}
+    type="button"
+  >
+     
+    <i
+      className="fas fa-power-off text-white"
+    />
+  </button>
+</div>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component renders correctly 1`] = `
+<div
+  className="logincont"
+>
+  <div
+    className=" bg-white mx-auto p-2 rounded signupitem"
+  >
+    <h4
+      className="text-center bg-info py-2 text-white mb-3 rounded"
+    >
+      Sign up for free!
+    </h4>
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-group text-left"
+      >
+        <input
+          className="form-control"
+          id="name"
+          onChange={[Function]}
+          placeholder="Enter your name"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group text-left"
+      >
+        <input
+          className="form-control"
+          id="username"
+          onChange={[Function]}
+          placeholder="Enter your username"
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group text-left"
+      >
+        <input
+          className="form-control"
+          id="email"
+          onChange={[Function]}
+          placeholder="Enter email"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group text-left"
+      >
+        <input
+          className="form-control"
+          id="password"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+      <button
+        className="btn btn-info w-100"
+        type="submit"
+      >
+        Sign up
+      </button>
+    </form>
+    <div
+      className="signupinfo text-right"
+    >
+      <p
+        className="tagline"
+      >
+        Already have an account?
+      </p>
+      <a
+        className="nav-link m-0 bg-danger w-25 text-center text-white rounded ml-auto tagbtn"
+        href="/login"
+        onClick={[Function]}
+      >
+        Login
+      </a>
+    </div>
+  </div>
+</div>
+`;

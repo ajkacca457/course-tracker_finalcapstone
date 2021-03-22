@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component renders correctly 1`] = `
+Array [
+  " ",
+  <div
+    className="easynav"
+  >
+    <div
+      className="navcont text-white bg-dark"
+    >
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/home"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-home"
+          />
+          <p>
+            Home
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/addcourse"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-plus-circle"
+          />
+          <p>
+            Add Course
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/courses"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-chart-line"
+          />
+          <p>
+            Track
+          </p>
+        </a>
+      </div>
+      <div
+        className="nav-item-easy"
+      >
+        <a
+          className="text-white"
+          href="/progress"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-chart-pie"
+          />
+          <p>
+            Report
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>,
+  " ",
+]
+`;
